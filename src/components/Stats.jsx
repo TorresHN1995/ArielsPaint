@@ -1,12 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-
-const stats = [
-  { target: 500, suffix: '+', label: 'Projects Done' },
-  { target: 15, suffix: '+', label: 'Years Experience' },
-  { target: 100, suffix: '%', label: 'Satisfaction Rate' },
-  { target: 50, suffix: '+', label: '5-Star Reviews' },
-]
+import { useLang } from '../i18n/LanguageContext'
 
 function Counter({ target, suffix }) {
   const [count, setCount] = useState(0)
@@ -43,6 +37,15 @@ function Counter({ target, suffix }) {
 }
 
 export default function Stats() {
+  const { t } = useLang()
+
+  const stats = [
+    { target: 500, suffix: '+', label: t.stats.projects },
+    { target: 15, suffix: '+', label: t.stats.years },
+    { target: 100, suffix: '%', label: t.stats.satisfaction },
+    { target: 50, suffix: '+', label: t.stats.reviews },
+  ]
+
   return (
     <section className="relative z-10 bg-gradient-to-r from-primary via-[#FF8F35] to-neon-2 py-11 shadow-[0_0_60px_rgba(255,107,53,0.3)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

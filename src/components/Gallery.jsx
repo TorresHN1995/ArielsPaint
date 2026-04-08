@@ -2,20 +2,24 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimatedSection from './AnimatedSection'
 import { FaCamera } from 'react-icons/fa6'
+import { useLang } from '../i18n/LanguageContext'
 
-const filters = ['all', 'interior', 'exterior', 'commercial']
-
-const projects = [
-  { cat: 'interior', title: 'Modern Living Room', desc: 'Warm neutral tones with bold accent wall', grad: 'from-primary to-neon-2' },
-  { cat: 'exterior', title: 'Colonial Home Refresh', desc: 'Complete exterior repaint with new trim', grad: 'from-accent-blue to-[#818CF8]' },
-  { cat: 'commercial', title: 'Office Renovation', desc: 'Modern workspace transformation', grad: 'from-accent-green to-accent-blue' },
-  { cat: 'interior', title: 'Kitchen Cabinets', desc: 'White shaker cabinet refinishing', grad: 'from-accent-pink to-accent-purple' },
-  { cat: 'exterior', title: 'Deck & Fence Staining', desc: 'Cedar restoration and sealing', grad: 'from-neon-2 to-primary' },
-  { cat: 'commercial', title: 'Restaurant Interior', desc: 'Vibrant dining atmosphere', grad: 'from-accent-purple to-accent-pink' },
+const filterKeys = ['all', 'interior', 'exterior', 'commercial']
+const cats = ['interior', 'exterior', 'commercial', 'interior', 'exterior', 'commercial']
+const grads = [
+  'from-primary to-neon-2',
+  'from-accent-blue to-[#818CF8]',
+  'from-accent-green to-accent-blue',
+  'from-accent-pink to-accent-purple',
+  'from-neon-2 to-primary',
+  'from-accent-purple to-accent-pink',
 ]
 
 export default function Gallery() {
+  const { t } = useLang()
   const [active, setActive] = useState('all')
+
+  const projects = t.gallery.projects.map((p, i) => ({ ...p, cat: cats[i], grad: grads[i] }))
   const filtered = active === 'all' ? projects : projects.filter(p => p.cat === active)
 
   return (
@@ -23,19 +27,16 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-14">
           <span className="inline-block px-5 py-2 bg-primary/12 border border-primary/20 text-primary font-heading text-sm font-semibold rounded-full mb-3.5">
-            <FaCamera className="inline mr-1.5 text-xs" /> Portfolio
+            <FaCamera className="inline mr-1.5 text-xs" /> {t.gallery.badge}
           </span>
           <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight text-white mb-3">
-            Our Recent <span className="neon-text">Projects</span>
+            {t.gallery.title} <span className="neon-text">{t.gallery.titleHighlight}</span>
           </h2>
-          <p className="text-white/45 text-lg max-w-xl mx-auto">
-            See the quality and craftsmanship that sets us apart.
-          </p>
+          <p className="text-white/45 text-lg max-w-xl mx-auto">{t.gallery.sub}</p>
         </AnimatedSection>
 
-        {/* Filters */}
         <AnimatedSection className="flex justify-center gap-2 mb-8 flex-wrap">
-          {filters.map(f => (
+          {filterKeys.map(f => (
             <button
               key={f}
               onClick={() => setActive(f)}
@@ -45,12 +46,11 @@ export default function Gallery() {
                   : 'bg-white/6 border-white/10 text-white/60 hover:bg-white/10 hover:text-white'
               }`}
             >
-              {f}
+              {t.gallery.filters[f]}
             </button>
           ))}
         </AnimatedSection>
 
-        {/* Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <AnimatePresence mode="popLayout">
             {filtered.map(p => (
@@ -65,7 +65,7 @@ export default function Gallery() {
                 <div className={`relative h-[260px] sm:h-[300px] rounded-2xl overflow-hidden bg-gradient-to-br ${p.grad} cursor-pointer group transition-all hover:scale-[1.03] hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]`}>
                   <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-dark-1/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400">
                     <span className="inline-block w-fit px-3.5 py-1 bg-primary text-white font-heading text-[0.7rem] font-bold rounded-full uppercase tracking-wide mb-2">
-                      {p.cat}
+                      {t.gallery.filters[p.cat]}
                     </span>
                     <h5 className="text-lg font-bold text-white mb-1">{p.title}</h5>
                     <p className="text-white/60 text-sm">{p.desc}</p>

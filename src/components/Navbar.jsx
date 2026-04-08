@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react'
 import { FaPaintRoller, FaPhone, FaBars, FaXmark } from 'react-icons/fa6'
-
-const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'About', href: '#about' },
-  { label: 'Gallery', href: '#work' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Contact', href: '#contact' },
-]
+import { useLang } from '../i18n/LanguageContext'
 
 export default function Navbar() {
+  const { lang, t, toggleLang } = useLang()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  const links = [
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.gallery, href: '#work' },
+    { label: t.nav.reviews, href: '#reviews' },
+    { label: t.nav.contact, href: '#contact' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -47,8 +49,19 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="tel:+1234567890" className="btn-glow rounded-full px-5 py-2.5 text-sm ml-3 flex items-center gap-2">
-            <FaPhone className="text-xs" /> Call Now
+
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            className="ml-2 px-3 py-2 rounded-lg text-sm font-heading font-semibold text-white/65 hover:text-white hover:bg-white/6 transition-all flex items-center gap-1.5"
+            title={lang === 'en' ? 'Cambiar a Espanol' : 'Switch to English'}
+          >
+            <span className="text-base">{lang === 'en' ? '🇺🇸' : '🇪🇸'}</span>
+            <span className="uppercase">{lang}</span>
+          </button>
+
+          <a href="tel:+1234567890" className="btn-glow rounded-full px-5 py-2.5 text-sm ml-2 flex items-center gap-2">
+            <FaPhone className="text-xs" /> {t.nav.callNow}
           </a>
         </div>
 
@@ -60,14 +73,22 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-dark-1/96 backdrop-blur-xl border border-white/6 rounded-2xl mx-4 mt-3 p-5 animate-in fade-in slide-in-from-top-2">
+        <div className="lg:hidden bg-dark-1/96 backdrop-blur-xl border border-white/6 rounded-2xl mx-4 mt-3 p-5">
           {links.map(l => (
             <a key={l.href} href={l.href} onClick={handleClick} className="block font-heading font-medium text-white/65 hover:text-white py-3 border-b border-white/5 last:border-0 transition-colors">
               {l.label}
             </a>
           ))}
+          {/* Mobile language toggle */}
+          <button
+            onClick={toggleLang}
+            className="w-full text-left font-heading font-medium text-white/65 hover:text-white py-3 border-b border-white/5 transition-colors flex items-center gap-2"
+          >
+            <span className="text-base">{lang === 'en' ? '🇪🇸' : '🇺🇸'}</span>
+            {lang === 'en' ? 'Espanol' : 'English'}
+          </button>
           <a href="tel:+1234567890" onClick={handleClick} className="btn-glow rounded-full px-5 py-3 text-sm mt-4 flex items-center justify-center gap-2 w-full">
-            <FaPhone className="text-xs" /> Call Now
+            <FaPhone className="text-xs" /> {t.nav.callNow}
           </a>
         </div>
       )}
