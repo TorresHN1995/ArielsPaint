@@ -8,32 +8,37 @@ export default function About() {
   const { t } = useLang()
 
   return (
-    <section className="py-24 bg-gradient-to-b from-dark-1 via-dark-3 to-dark-1 relative" id="about">
+    <section className="py-24 sm:py-28 bg-gradient-to-b from-dark-1 via-dark-3 to-dark-1 relative" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection variant="fadeRight" className="relative min-h-[380px] lg:min-h-[460px]">
-            <div className="relative w-full h-[300px] sm:h-[400px] rounded-3xl overflow-hidden">
-              <img src="https://media.giphy.com/media/6HqQWmuTQheEidhVE9/giphy.gif" alt="Painting work" className="w-full h-full object-cover brightness-80 saturate-[1.2]" />
-              <div className="absolute inset-0 border-2 border-primary/30 rounded-3xl pointer-events-none shadow-[inset_0_0_60px_rgba(0,0,0,0.4)]" />
+            <div className="relative w-full h-[320px] sm:h-[440px] rounded-3xl overflow-hidden border border-white/10 shadow-[0_25px_70px_rgba(0,0,0,0.5)]">
+              <img
+                src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=900&q=80&auto=format&fit=crop"
+                alt="Professional painter at work"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-dark-1/40 via-transparent to-transparent" />
             </div>
 
-            <div className="absolute bottom-[30px] left-0 sm:-left-2.5 animate-float flex items-center gap-3 bg-dark-1/85 backdrop-blur-2xl border border-white/10 rounded-2xl px-5 py-4 shadow-[0_12px_40px_rgba(0,0,0,0.3)] z-10">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-neon-2 text-white flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.3)]">
+            <div className="absolute bottom-[30px] left-0 sm:-left-2.5 animate-float flex items-center gap-3 bg-dark-1/90 backdrop-blur-2xl border border-white/12 rounded-2xl px-5 py-4 shadow-[0_12px_40px_rgba(0,0,0,0.4)] z-10">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-[#FFB23D] text-white flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.4)]">
                 <FaTrophy />
               </div>
               <div>
-                <strong className="block font-heading text-lg text-white">{t.about.floatYears}</strong>
-                <small className="text-white/50 text-xs">{t.about.floatYearsSub}</small>
+                <strong className="block font-heading text-lg text-white leading-tight">{t.about.floatYears}</strong>
+                <small className="text-white/70 text-xs">{t.about.floatYearsSub}</small>
               </div>
             </div>
 
-            <div className="absolute top-[30px] right-0 sm:-right-2.5 animate-float-slow flex items-center gap-3 bg-dark-1/85 backdrop-blur-2xl border border-white/10 rounded-2xl px-5 py-4 shadow-[0_12px_40px_rgba(0,0,0,0.3)] z-10">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-neon-2 text-white flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(255,107,53,0.3)]">
+            <div className="absolute top-[30px] right-0 sm:-right-2.5 animate-float-slow flex items-center gap-3 bg-dark-1/90 backdrop-blur-2xl border border-white/12 rounded-2xl px-5 py-4 shadow-[0_12px_40px_rgba(0,0,0,0.4)] z-10">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent-green to-accent-blue text-white flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(0,229,160,0.4)]">
                 <FaThumbsUp />
               </div>
               <div>
-                <strong className="block font-heading text-lg text-white">{t.about.floatSatisfaction}</strong>
-                <small className="text-white/50 text-xs">{t.about.floatSatisfactionSub}</small>
+                <strong className="block font-heading text-lg text-white leading-tight">{t.about.floatSatisfaction}</strong>
+                <small className="text-white/70 text-xs">{t.about.floatSatisfactionSub}</small>
               </div>
             </div>
           </AnimatedSection>
@@ -45,8 +50,8 @@ export default function About() {
             <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight text-white mb-4">
               {t.about.title} <span className="neon-text">{t.about.titleHighlight}</span>
             </h2>
-            <p className="text-white/75 text-lg mb-3">{t.about.p1}</p>
-            <p className="text-white/50 mb-6">{t.about.p2}</p>
+            <p className="text-white/85 text-lg mb-3">{t.about.p1}</p>
+            <p className="text-white/70 mb-6">{t.about.p2}</p>
 
             <div className="grid sm:grid-cols-2 gap-3 mb-6">
               {t.about.features.map((feat, i) => {
@@ -58,7 +63,7 @@ export default function About() {
                     </div>
                     <div>
                       <strong className="font-heading text-sm text-white block">{feat.title}</strong>
-                      <small className="text-white/40 text-xs">{feat.sub}</small>
+                      <small className="text-white/65 text-xs">{feat.sub}</small>
                     </div>
                   </div>
                 )

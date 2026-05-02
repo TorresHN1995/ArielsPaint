@@ -18,23 +18,27 @@ export default function Process() {
           <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight text-white mb-3">
             {t.process.title} <span className="neon-text">{t.process.titleHighlight}</span>
           </h2>
-          <p className="text-white/45 text-lg max-w-xl mx-auto">{t.process.sub}</p>
+          <p className="text-white/70 text-lg max-w-xl mx-auto">{t.process.sub}</p>
         </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="hidden lg:block absolute top-[44px] left-[12.5%] right-[12.5%] h-px pointer-events-none" style={{
+            background: 'linear-gradient(90deg, transparent 0%, rgba(255,107,53,0.5) 15%, rgba(255,217,61,0.5) 50%, rgba(255,107,53,0.5) 85%, transparent 100%)'
+          }} />
+
           {t.process.steps.map((s, i) => {
             const Icon = stepIcons[i]
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="glass-card relative pt-10 pb-8 px-6 text-center h-full hover:border-primary/20 hover:shadow-[0_0_30px_rgba(255,107,53,0.08)]">
+                <div className="glass-card relative pt-10 pb-8 px-6 text-center h-full hover:border-primary/30 hover:shadow-[0_0_30px_rgba(255,107,53,0.12)]">
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-neon-2 rounded-full font-heading font-extrabold text-xs text-white shadow-[0_0_20px_rgba(255,107,53,0.4)]">
                     {stepNums[i]}
                   </div>
-                  <div className="w-16 h-16 mx-auto mb-5 rounded-[18px] bg-primary/10 border border-primary/15 flex items-center justify-center text-2xl text-primary">
+                  <div className="relative z-10 w-16 h-16 mx-auto mb-5 rounded-[18px] bg-dark-3 border border-primary/30 flex items-center justify-center text-2xl text-primary shadow-[0_0_24px_rgba(255,107,53,0.15)]">
                     <Icon />
                   </div>
                   <h5 className="text-lg font-bold mb-2.5">{s.title}</h5>
-                  <p className="text-white/40 text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </AnimatedSection>
             )

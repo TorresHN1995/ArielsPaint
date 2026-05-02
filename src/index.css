@@ -56,7 +56,13 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-float-d2, .animate-float-d3, .animate-float-d4, .animate-float-slow, .animate-pulse-dot, .neon-text {
+    animation: none !important;
+  }
 }
 
 /* ====== ANIMATIONS ====== */

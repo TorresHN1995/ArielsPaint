@@ -8,8 +8,16 @@ export default function CTA() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img src="https://media.giphy.com/media/1k2WcKGkRB9i1oQfYI/giphy.gif" alt="" className="w-full h-full object-cover opacity-15 saturate-[1.4] brightness-80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-1 via-primary/20 to-dark-1" />
+        <img
+          src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1600&q=70&auto=format&fit=crop"
+          alt=""
+          className="w-full h-full object-cover opacity-25"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-1 via-primary/15 to-dark-1" />
+        <div className="absolute inset-0" style={{
+          background: 'radial-gradient(ellipse at center, rgba(255,107,53,0.18) 0%, transparent 60%)'
+        }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +25,7 @@ export default function CTA() {
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
             {t.cta.title1}<br />{t.cta.title2}
           </h2>
-          <p className="text-lg sm:text-xl text-white/75 mb-8 max-w-lg mx-auto">{t.cta.sub}</p>
+          <p className="text-lg sm:text-xl text-white/85 mb-8 max-w-lg mx-auto">{t.cta.sub}</p>
           <a href="#contact" className="btn-glow text-base sm:text-lg rounded-full px-8 sm:px-10 py-4 inline-flex items-center gap-2 shadow-2xl">
             <FaPaperPlane /> {t.cta.btn}
           </a>

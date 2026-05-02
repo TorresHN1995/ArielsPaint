@@ -3,17 +3,21 @@ import { FaCouch, FaHouseChimney, FaCity, FaPalette, FaSprayCanSparkles, FaDropl
 import { useLang } from '../i18n/LanguageContext'
 
 const iconMap = [FaCouch, FaHouseChimney, FaCity, FaPalette, FaSprayCanSparkles, FaDroplet]
-const colorMap = ['#FF6B35', '#00E5A0', '#A855F7', '#FFD93D', '#F43F5E', '#38BDF8']
+const colorMap = ['#FF6B35', '#00E5A0', '#FFD93D', '#FF6B35', '#00E5A0', '#FFD93D']
 const keys = ['interior', 'exterior', 'commercial', 'specialty', 'staining', 'pressure']
 
 export default function Services() {
   const { t } = useLang()
 
   return (
-    <section className="py-24 bg-dark-2 relative overflow-hidden" id="services">
-      <div className="absolute inset-0 z-0">
-        <img src="https://media.giphy.com/media/l1BgTdNrZFmbpFPOM/giphy.gif" alt="" className="w-full h-full object-cover opacity-8 saturate-150" />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-2 via-dark-2/85 to-dark-2" />
+    <section className="py-28 bg-dark-2 relative overflow-hidden" id="services">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full" style={{
+          background: 'radial-gradient(circle, rgba(255,107,53,0.12) 0%, transparent 70%)'
+        }} />
+        <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] rounded-full" style={{
+          background: 'radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%)'
+        }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +28,7 @@ export default function Services() {
           <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight text-white mb-3">
             {t.services.title} <span className="neon-text">{t.services.titleHighlight}</span>
           </h2>
-          <p className="text-white/45 text-lg max-w-xl mx-auto">{t.services.sub}</p>
+          <p className="text-white/70 text-lg max-w-xl mx-auto">{t.services.sub}</p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -51,11 +55,11 @@ export default function Services() {
                   )}
 
                   <h4 className="text-xl font-bold mb-2.5">{s.title}</h4>
-                  <p className="text-white/50 text-sm leading-relaxed mb-5">{s.desc}</p>
+                  <p className="text-white/70 text-sm leading-relaxed mb-5">{s.desc}</p>
 
                   <ul className="space-y-2 mb-5 flex-grow">
                     {s.items.map(item => (
-                      <li key={item} className="text-sm text-white/60 flex items-center gap-2.5">
+                      <li key={item} className="text-sm text-white/75 flex items-center gap-2.5">
                         <FaCircleCheck className="text-accent-green text-xs shrink-0" /> {item}
                       </li>
                     ))}

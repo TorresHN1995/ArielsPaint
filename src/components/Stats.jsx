@@ -47,8 +47,14 @@ export default function Stats() {
   ]
 
   return (
-    <section className="relative z-10 bg-gradient-to-r from-primary via-[#FF8F35] to-neon-2 py-11 shadow-[0_0_60px_rgba(255,107,53,0.3)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative z-10 bg-dark-3 border-y border-primary/20 py-12 overflow-hidden">
+      <div className="absolute inset-0 opacity-90" style={{
+        background: 'linear-gradient(95deg, #FF6B35 0%, #FF8F35 55%, #E8A93B 100%)'
+      }} />
+      <div className="absolute inset-0" style={{
+        background: 'radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.18) 100%)'
+      }} />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((s, i) => (
             <motion.div
@@ -59,7 +65,7 @@ export default function Stats() {
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
               <Counter target={s.target} suffix={s.suffix} />
-              <p className="text-white/70 text-xs font-semibold uppercase tracking-[1.5px] mt-1">{s.label}</p>
+              <p className="text-white/85 text-xs font-semibold uppercase tracking-[1.5px] mt-1">{s.label}</p>
             </motion.div>
           ))}
         </div>

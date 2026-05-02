@@ -51,7 +51,7 @@ export default function Contact() {
             <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight text-white mb-3">
               {t.contact.title} <span className="neon-text">{t.contact.titleHighlight}</span>
             </h2>
-            <p className="text-white/50 mb-8">{t.contact.sub}</p>
+            <p className="text-white/75 mb-8">{t.contact.sub}</p>
 
             <div className="space-y-5 mb-8">
               {contactLabels.map((label, i) => {
@@ -66,9 +66,9 @@ export default function Contact() {
                     <div>
                       <strong className="font-heading text-sm text-white block">{label}</strong>
                       {href ? (
-                        <a href={href} className="text-sm text-white/50 hover:text-primary transition-colors">{value}</a>
+                        <a href={href} className="text-sm text-white/75 hover:text-primary transition-colors">{value}</a>
                       ) : (
-                        <span className="text-sm text-white/50">{value}</span>
+                        <span className="text-sm text-white/75">{value}</span>
                       )}
                     </div>
                   </div>
@@ -80,7 +80,7 @@ export default function Contact() {
             <p className="text-white font-semibold mb-3 text-sm">{t.contact.followUs}</p>
             <div className="flex gap-3">
               {socials.map(({ icon: Icon, href }, i) => (
-                <a key={i} href={href} className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:bg-gradient-to-br hover:from-primary hover:to-neon-2 hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] transition-all">
+                <a key={i} href={href} className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/75 hover:bg-gradient-to-br hover:from-primary hover:to-neon-2 hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] transition-all">
                   <Icon />
                 </a>
               ))}
@@ -90,7 +90,7 @@ export default function Contact() {
           <AnimatedSection variant="fadeLeft" className="lg:col-span-3">
             <div className="glass-card p-8 sm:p-9">
               <h4 className="text-white text-xl font-bold mb-1">{t.contact.formTitle}</h4>
-              <p className="text-white/50 text-sm mb-6">{t.contact.formSub}</p>
+              <p className="text-white/75 text-sm mb-6">{t.contact.formSub}</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -142,7 +142,7 @@ export default function Contact() {
                   {status === 'sent' && <><FaCheck /> {t.contact.sent}</>}
                 </button>
 
-                <p className="text-center text-xs text-white/50 flex items-center justify-center gap-1">
+                <p className="text-center text-xs text-white/75 flex items-center justify-center gap-1">
                   <FaLock className="text-[10px]" /> {t.contact.secure}
                 </p>
               </form>
