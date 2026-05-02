@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaPhone, FaBars, FaXmark } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
-import BrandLogo from './BrandLogo'
+import logo from '../assets/logo.png'
 
 export default function Navbar() {
   const { lang, t, toggleLang } = useLang()
@@ -33,13 +33,13 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand */}
-        <a href="#hero" className="flex items-center gap-2.5 group">
-          <div className="w-11 h-11 bg-dark-3 border border-white/10 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,107,53,0.25)] group-hover:scale-105 transition-transform">
-            <BrandLogo className="w-7 h-7" />
-          </div>
-          <div>
-            <span className="block font-heading font-extrabold text-xl text-white leading-tight">Ariel's</span>
-            <span className="block text-[0.62rem] font-semibold text-white/55 uppercase tracking-[1.5px]">Painting Contracting</span>
+        <a href="#hero" className="flex items-center group">
+          <div className="bg-white rounded-2xl px-3 py-1.5 shadow-[0_6px_24px_rgba(255,107,53,0.35)] ring-1 ring-white/10 group-hover:shadow-[0_6px_30px_rgba(255,107,53,0.55)] group-hover:scale-105 transition-all duration-300">
+            <img
+              src={logo}
+              alt="Ariel's Painting & Home Improvement"
+              className="h-9 sm:h-11 w-auto object-contain block mix-blend-multiply"
+            />
           </div>
         </a>
 

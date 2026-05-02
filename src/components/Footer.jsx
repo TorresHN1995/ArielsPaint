@@ -1,5 +1,5 @@
 import { useLang } from '../i18n/LanguageContext'
-import BrandLogo from './BrandLogo'
+import logo from '../assets/logo.png'
 
 export default function Footer() {
   const { t } = useLang()
@@ -25,13 +25,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div>
-            <a href="#hero" className="flex items-center gap-2 mb-4 group">
-              <div className="w-10 h-10 bg-dark-3 border border-white/10 rounded-[10px] flex items-center justify-center shadow-[0_0_18px_rgba(255,107,53,0.25)]">
-                <BrandLogo className="w-6 h-6" />
-              </div>
-              <div>
-                <span className="block font-heading font-extrabold text-white text-lg leading-tight">Ariel's</span>
-                <span className="block text-[0.62rem] font-semibold text-white/55 uppercase tracking-[1.5px]">Painting Contracting</span>
+            <a href="#hero" className="inline-flex items-center mb-4 group">
+              <div className="bg-white rounded-2xl px-4 py-2.5 shadow-[0_6px_28px_rgba(255,107,53,0.3)] ring-1 ring-white/10 group-hover:shadow-[0_6px_32px_rgba(255,107,53,0.5)] group-hover:scale-[1.03] transition-all duration-300">
+                <img
+                  src={logo}
+                  alt="Ariel's Painting & Home Improvement"
+                  className="h-14 w-auto object-contain block mix-blend-multiply"
+                />
               </div>
             </a>
             <p className="text-white/65 text-sm leading-relaxed">{t.footer.desc}</p>
