@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaPhone, FaBars, FaXmark } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-light.png'
 
 export default function Navbar() {
   const { lang, t, toggleLang } = useLang()
@@ -34,13 +34,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand */}
         <a href="#hero" className="flex items-center group">
-          <div className="bg-white rounded-2xl px-3 py-1.5 shadow-[0_6px_24px_rgba(255,107,53,0.35)] ring-1 ring-white/10 group-hover:shadow-[0_6px_30px_rgba(255,107,53,0.55)] group-hover:scale-105 transition-all duration-300">
-            <img
-              src={logo}
-              alt="Ariel's Painting & Home Improvement"
-              className="h-9 sm:h-11 w-auto object-contain block mix-blend-multiply"
-            />
-          </div>
+          <img
+            src={logo}
+            alt="Ariel's Painting & Home Improvement"
+            className="h-12 sm:h-14 w-auto object-contain block group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_4px_18px_rgba(255,107,53,0.45)]"
+          />
         </a>
 
         {/* Desktop nav */}

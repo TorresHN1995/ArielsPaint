@@ -1,5 +1,5 @@
 import { useLang } from '../i18n/LanguageContext'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo-light.png'
 
 export default function Footer() {
   const { t } = useLang()
@@ -26,13 +26,11 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div>
             <a href="#hero" className="inline-flex items-center mb-4 group">
-              <div className="bg-white rounded-2xl px-4 py-2.5 shadow-[0_6px_28px_rgba(255,107,53,0.3)] ring-1 ring-white/10 group-hover:shadow-[0_6px_32px_rgba(255,107,53,0.5)] group-hover:scale-[1.03] transition-all duration-300">
-                <img
-                  src={logo}
-                  alt="Ariel's Painting & Home Improvement"
-                  className="h-14 w-auto object-contain block mix-blend-multiply"
-                />
-              </div>
+              <img
+                src={logo}
+                alt="Ariel's Painting & Home Improvement"
+                className="h-16 w-auto object-contain block group-hover:scale-[1.04] transition-transform duration-300 drop-shadow-[0_4px_18px_rgba(255,107,53,0.4)]"
+              />
             </a>
             <p className="text-white/65 text-sm leading-relaxed">{t.footer.desc}</p>
           </div>
