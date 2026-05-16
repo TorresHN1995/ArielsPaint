@@ -22,7 +22,7 @@ export const translations = {
       btnWork: 'See Our Work',
       trustLicensed: 'Licensed & Insured',
       trustYears: '15+ Years',
-      trustClients: '500+ Clients',
+      trustClients: '5,000+ Clients',
       cardInterior: 'Interior',
       cardInteriorSub: 'Walls, Ceilings, Trim',
       cardCommercial: 'Commercial',
@@ -61,12 +61,7 @@ export const translations = {
       commercial: {
         title: 'Commercial Painting',
         desc: 'Offices, retail, restaurants — we work around your schedule to minimize disruption.',
-        items: ['Office & Retail Spaces', 'Restaurants & Hotels', 'After-Hours Available', 'HOA & Property Mgmt'],
-      },
-      specialty: {
-        title: 'Specialty Finishes',
-        desc: 'Add character with decorative faux finishes, textured walls, metallic accents & murals.',
-        items: ['Faux & Textured Finishes', 'Accent Walls', 'Epoxy Floor Coatings', 'Wallpaper Installation'],
+        items: ['Office & Retail Spaces', 'Restaurants & Hotels'],
       },
       staining: {
         title: 'Staining & Finishing',
@@ -180,7 +175,7 @@ export const translations = {
       sending: 'Sending...',
       sent: 'Sent Successfully!',
       secure: 'Your information is secure and never shared.',
-      serviceOptions: ['Interior Painting', 'Exterior Painting', 'Commercial Painting', 'Specialty Finishes', 'Staining & Finishing', 'Pressure Washing', 'Other'],
+      serviceOptions: ['Interior Painting', 'Exterior Painting', 'Commercial Painting', 'Staining & Finishing', 'Pressure Washing', 'Other'],
     },
 
     // Footer
@@ -215,7 +210,7 @@ export const translations = {
       btnWork: 'Ver Trabajos',
       trustLicensed: 'Licenciado y Asegurado',
       trustYears: '15+ Anos',
-      trustClients: '500+ Clientes',
+      trustClients: '5,000+ Clientes',
       cardInterior: 'Interior',
       cardInteriorSub: 'Paredes, Techos, Molduras',
       cardCommercial: 'Comercial',
@@ -252,12 +247,7 @@ export const translations = {
       commercial: {
         title: 'Pintura Comercial',
         desc: 'Oficinas, comercios, restaurantes — trabajamos segun tu horario para minimizar interrupciones.',
-        items: ['Oficinas y Comercios', 'Restaurantes y Hoteles', 'Disponible Fuera de Horario', 'HOA y Administracion'],
-      },
-      specialty: {
-        title: 'Acabados Especiales',
-        desc: 'Agrega caracter con acabados decorativos, paredes texturizadas, acentos metalicos y murales.',
-        items: ['Acabados Faux y Texturizados', 'Paredes de Acento', 'Recubrimiento Epoxi', 'Instalacion de Papel Tapiz'],
+        items: ['Oficinas y Comercios', 'Restaurantes y Hoteles'],
       },
       staining: {
         title: 'Tincion y Acabado',
@@ -365,7 +355,7 @@ export const translations = {
       sending: 'Enviando...',
       sent: 'Enviado Exitosamente!',
       secure: 'Tu informacion es segura y nunca se comparte.',
-      serviceOptions: ['Pintura Interior', 'Pintura Exterior', 'Pintura Comercial', 'Acabados Especiales', 'Tincion y Acabado', 'Lavado a Presion', 'Otro'],
+      serviceOptions: ['Pintura Interior', 'Pintura Exterior', 'Pintura Comercial', 'Tincion y Acabado', 'Lavado a Presion', 'Otro'],
     },
 
     footer: {
