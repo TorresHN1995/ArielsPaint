@@ -61,7 +61,7 @@ export default function Footer() {
             <h6 className="text-white font-heading font-bold text-sm mb-4">{t.footer.contactTitle}</h6>
             <ul className="space-y-2.5 text-white/60 text-sm">
               <li className="flex items-center gap-2"><span className="text-primary">&#9742;</span> (123) 456-7890</li>
-              <li className="flex items-center gap-2"><span className="text-primary">&#9993;</span> castoresconstruction@gmail.com</li>
+              <li className="flex items-center gap-2"><span className="text-primary">&#9993;</span> info@arielspaintingcontracting.com</li>
               <li className="flex items-center gap-2"><span className="text-primary">&#9200;</span> {t.contact.hoursValue}</li>
             </ul>
           </div>
