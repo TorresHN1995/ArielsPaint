@@ -16,7 +16,7 @@ export default function Footer() {
     t.services.interior.title,
     t.services.exterior.title,
     t.services.commercial.title,
-    t.services.specialty.title,
+    t.services.staining.title,
     t.services.pressure.title,
   ]
 
