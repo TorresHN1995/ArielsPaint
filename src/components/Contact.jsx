@@ -4,8 +4,8 @@ import { FaMessage, FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, F
 import { useLang } from '../i18n/LanguageContext'
 
 const contactIcons = [FaPhone, FaEnvelope, FaLocationDot, FaClock]
-const contactHrefs = ['tel:+1234567890', 'mailto:info@arielspaintingcontracting.com', null, null]
-const contactValues = ['(123) 456-7890', 'info@arielspaintingcontracting.com', null, null]
+const contactHrefs = ['tel:+1234567890', 'mailto:castoresconstruction@gmail.com', null, null]
+const contactValues = ['(123) 456-7890', 'castoresconstruction@gmail.com', null, null]
 
 const socials = [
   { icon: FaFacebookF, href: '#' },

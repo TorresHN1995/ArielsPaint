@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaCalendarCheck, FaImages, FaShieldHalved, FaAward, FaHeart, FaHouse, FaBuilding, FaTree, FaStar, FaGoogle } from 'react-icons/fa6'
+import { FaCalendarCheck, FaImages, FaShieldHalved, FaAward, FaHeart, FaHouse, FaBuilding, FaTree, FaStar, FaGoogle, FaPeopleRoof, FaHandshake } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
 
 export default function Hero() {
@@ -9,6 +9,8 @@ export default function Hero() {
     { icon: FaShieldHalved, text: t.hero.trustLicensed },
     { icon: FaAward, text: t.hero.trustYears },
     { icon: FaHeart, text: t.hero.trustClients },
+    { icon: FaPeopleRoof, text: t.hero.trustFamily },
+    { icon: FaHandshake, text: t.hero.trustCommunity },
   ]
 
   const floatCards = [

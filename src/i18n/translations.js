@@ -13,9 +13,9 @@ export const translations = {
     // Hero
     hero: {
       badge: 'Top Rated Painting Contractor',
-      titlePre: 'We Bring',
-      titleHighlight: 'Color',
-      titlePost: 'to Your World',
+      titlePre: 'Painting that',
+      titleHighlight: 'Lasts',
+      titlePost: 'for Years',
       desc: 'Professional painting services for homes and businesses. Exceptional quality, transparent pricing, and results that make you say',
       descWow: '"wow."',
       btnEstimate: 'Free Estimate',
@@ -23,6 +23,8 @@ export const translations = {
       trustLicensed: 'Licensed & Insured',
       trustYears: '15+ Years',
       trustClients: '5,000+ Clients',
+      trustFamily: 'Family Owned & Operated',
+      trustCommunity: 'Community Trusted',
       cardInterior: 'Interior',
       cardInteriorSub: 'Walls, Ceilings, Trim',
       cardCommercial: 'Commercial',
@@ -201,9 +203,9 @@ export const translations = {
 
     hero: {
       badge: 'Contratista de Pintura Mejor Valorado',
-      titlePre: 'Traemos',
-      titleHighlight: 'Color',
-      titlePost: 'a Tu Mundo',
+      titlePre: 'Pintura que',
+      titleHighlight: 'Dura',
+      titlePost: 'por Anos',
       desc: 'Servicios profesionales de pintura para hogares y negocios. Calidad excepcional, precios transparentes y resultados que te haran decir',
       descWow: '"wow."',
       btnEstimate: 'Cotizacion Gratis',
@@ -211,6 +213,8 @@ export const translations = {
       trustLicensed: 'Licenciado y Asegurado',
       trustYears: '15+ Anos',
       trustClients: '5,000+ Clientes',
+      trustFamily: 'Empresa Familiar',
+      trustCommunity: 'Confianza de la Comunidad',
       cardInterior: 'Interior',
       cardInteriorSub: 'Paredes, Techos, Molduras',
       cardCommercial: 'Comercial',
