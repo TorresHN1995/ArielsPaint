@@ -46,7 +46,7 @@ export default function Hero() {
         <div className="min-h-screen flex items-center">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
             <motion.div
-              className="lg:col-span-7 pt-24 pb-6 lg:py-0"
+              className="lg:col-span-7 pt-28 pb-6 lg:py-0"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -100,17 +100,6 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="absolute inset-0 rounded-[28px] overflow-hidden border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.5)]">
-                <img
-                  src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=900&q=80&auto=format&fit=crop"
-                  alt="Freshly painted modern interior"
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-dark-1/60 via-transparent to-transparent" />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-[28px]" />
-              </div>
-
               {floatCards.map(({ icon: Icon, label, sub, color, pos, anim }) => (
                 <div key={label} className={`absolute ${pos} ${anim} flex items-center gap-3 bg-dark-2/90 backdrop-blur-xl border border-white/12 rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 text-white shadow-[0_12px_40px_rgba(0,0,0,0.4)]`}>
                   <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-base sm:text-lg text-white shrink-0" style={{ background: color, boxShadow: `0 0 18px ${color}55` }}>
