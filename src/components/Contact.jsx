@@ -1,18 +1,11 @@
 import { useState } from 'react'
 import AnimatedSection from './AnimatedSection'
-import { FaMessage, FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, FaLock, FaSpinner, FaCheck, FaFacebookF, FaInstagram, FaGoogle, FaYelp } from 'react-icons/fa6'
+import { FaMessage, FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, FaLock, FaSpinner, FaCheck } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
 
 const contactIcons = [FaPhone, FaEnvelope, FaLocationDot, FaClock]
 const contactHrefs = ['tel:+19083032770', 'mailto:info@arielspaintingcontracting.com', null, null]
 const contactValues = ['908-303-2770', 'info@arielspaintingcontracting.com', null, null]
-
-const socials = [
-  { icon: FaFacebookF, href: '#' },
-  { icon: FaInstagram, href: '#' },
-  { icon: FaGoogle, href: '#' },
-  { icon: FaYelp, href: '#' },
-]
 
 const inputClass = 'w-full bg-white/4 border border-white/10 rounded-xl px-4 py-3 text-white font-[var(--font-body)] placeholder:text-white/25 focus:bg-white/6 focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none transition-all'
 
@@ -74,16 +67,6 @@ export default function Contact() {
                   </div>
                 )
               })}
-            </div>
-
-            <hr className="border-white/10 mb-6" />
-            <p className="text-white font-semibold mb-3 text-sm">{t.contact.followUs}</p>
-            <div className="flex gap-3">
-              {socials.map(({ icon: Icon, href }, i) => (
-                <a key={i} href={href} className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-white/75 hover:bg-gradient-to-br hover:from-primary hover:to-neon-2 hover:border-transparent hover:text-white hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,107,53,0.5)] transition-all">
-                  <Icon />
-                </a>
-              ))}
             </div>
           </AnimatedSection>
 
