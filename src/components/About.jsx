@@ -1,6 +1,7 @@
 import AnimatedSection from './AnimatedSection'
 import { FaTrophy, FaThumbsUp, FaUsers, FaShieldHalved, FaHandHoldingDollar, FaCertificate, FaAward, FaEnvelope } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
+import aboutImg from '../assets/about.jpg'
 
 const featureIcons = [FaShieldHalved, FaHandHoldingDollar, FaCertificate, FaAward]
 
@@ -14,8 +15,8 @@ export default function About() {
           <AnimatedSection variant="fadeRight" className="relative min-h-[380px] lg:min-h-[460px]">
             <div className="relative w-full h-[320px] sm:h-[440px] rounded-3xl overflow-hidden border border-white/10 shadow-[0_25px_70px_rgba(0,0,0,0.5)]">
               <img
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=900&q=80&auto=format&fit=crop"
-                alt="Painter using a brush on a bright wall"
+                src={aboutImg}
+                alt="Ariel's painter rolling fresh paint on an interior wall"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
