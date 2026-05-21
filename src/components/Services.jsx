@@ -1,10 +1,10 @@
 import AnimatedSection from './AnimatedSection'
-import { FaCouch, FaHouseChimney, FaCity, FaSprayCanSparkles, FaDroplet, FaCircleCheck, FaArrowRight, FaBrush } from 'react-icons/fa6'
+import { FaCouch, FaHouseChimney, FaSprayCanSparkles, FaDroplet, FaCircleCheck, FaArrowRight, FaBrush } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
 
-const iconMap = [FaCouch, FaHouseChimney, FaCity, FaSprayCanSparkles, FaDroplet]
-const colorMap = ['#FF6B35', '#00E5A0', '#FFD93D', '#00E5A0', '#FFD93D']
-const keys = ['interior', 'exterior', 'commercial', 'staining', 'pressure']
+const iconMap = [FaCouch, FaHouseChimney, FaSprayCanSparkles, FaDroplet]
+const colorMap = ['#FF6B35', '#00E5A0', '#00E5A0', '#FFD93D']
+const keys = ['interior', 'exterior', 'staining', 'pressure']
 
 export default function Services() {
   const { t } = useLang()

@@ -19,6 +19,7 @@ export const translations = {
       desc: 'Professional painting services for homes and businesses. Exceptional quality, transparent pricing, and results that make you say',
       descWow: '"wow."',
       btnEstimate: 'Free Estimate',
+      btnEstimateSub: 'Free, No Obligation',
       btnWork: 'See Our Work',
       trustLicensed: 'Licensed & Insured',
       trustYears: '15+ Years',
@@ -53,7 +54,7 @@ export const translations = {
       interior: {
         title: 'Interior Painting',
         desc: 'Transform any room with flawless wall, ceiling, and trim painting using premium paints.',
-        items: ['Walls & Ceilings', 'Trim, Doors & Molding', 'Cabinet Refinishing', 'Color Consultation'],
+        items: ['Walls & Ceilings', 'Trim, Doors & Molding', 'Cabinet Refinishing'],
       },
       exterior: {
         title: 'Exterior Painting',
@@ -209,6 +210,7 @@ export const translations = {
       desc: 'Servicios profesionales de pintura para hogares y negocios. Calidad excepcional, precios transparentes y resultados que te haran decir',
       descWow: '"wow."',
       btnEstimate: 'Cotizacion Gratis',
+      btnEstimateSub: 'Gratis, Sin Compromiso',
       btnWork: 'Ver Trabajos',
       trustLicensed: 'Licenciado y Asegurado',
       trustYears: '15+ Anos',
@@ -241,7 +243,7 @@ export const translations = {
       interior: {
         title: 'Pintura Interior',
         desc: 'Transforma cualquier habitacion con pintura impecable de paredes, techos y molduras usando pinturas premium.',
-        items: ['Paredes y Techos', 'Molduras, Puertas y Marcos', 'Renovacion de Gabinetes', 'Consultoria de Color'],
+        items: ['Paredes y Techos', 'Molduras, Puertas y Marcos', 'Renovacion de Gabinetes'],
       },
       exterior: {
         title: 'Pintura Exterior',

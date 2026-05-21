@@ -119,9 +119,15 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="absolute bottom-[2%] left-1/2 -translate-x-1/2 animate-float-d3 btn-glow rounded-full px-6 py-3.5 text-sm sm:text-base flex items-center gap-2 whitespace-nowrap shadow-[0_12px_40px_rgba(255,107,53,0.45)] z-20"
+                className="absolute top-[6%] -left-2 animate-float-d3 flex items-center gap-3 bg-dark-2/90 backdrop-blur-xl border border-white/12 rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 text-white shadow-[0_12px_40px_rgba(0,0,0,0.4)] hover:-translate-y-0.5 hover:border-white/25 transition-all z-20"
               >
-                <FaCalendarCheck /> {t.hero.btnEstimate}
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center text-base sm:text-lg text-white shrink-0" style={{ background: '#38BDF8', boxShadow: '0 0 18px #38BDF855' }}>
+                  <FaCalendarCheck />
+                </div>
+                <div>
+                  <strong className="block font-heading text-sm sm:text-base leading-tight">{t.hero.btnEstimate}</strong>
+                  <small className="text-white/55 text-[0.7rem] sm:text-xs">{t.hero.btnEstimateSub}</small>
+                </div>
               </a>
             </motion.div>
           </div>

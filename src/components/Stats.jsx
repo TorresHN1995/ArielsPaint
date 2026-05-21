@@ -40,7 +40,7 @@ export default function Stats() {
   const { t } = useLang()
 
   const stats = [
-    { target: 500, suffix: '+', label: t.stats.projects },
+    { target: 5000, suffix: '+', label: t.stats.projects },
     { target: 15, suffix: '+', label: t.stats.years },
     { target: 100, suffix: '%', label: t.stats.satisfaction },
     { target: 50, suffix: '+', label: t.stats.reviews },
