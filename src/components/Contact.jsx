@@ -4,8 +4,8 @@ import { FaMessage, FaPhone, FaEnvelope, FaLocationDot, FaClock, FaPaperPlane, F
 import { useLang } from '../i18n/LanguageContext'
 
 const contactIcons = [FaPhone, FaEnvelope, FaLocationDot, FaClock]
-const contactHrefs = ['tel:+1234567890', 'mailto:info@arielspaintingcontracting.com', null, null]
-const contactValues = ['(123) 456-7890', 'info@arielspaintingcontracting.com', null, null]
+const contactHrefs = ['tel:+19083032770', 'mailto:info@arielspaintingcontracting.com', null, null]
+const contactValues = ['908-303-2770', 'info@arielspaintingcontracting.com', null, null]
 
 const socials = [
   { icon: FaFacebookF, href: '#' },
@@ -116,13 +116,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block font-heading font-semibold text-sm text-white/80 mb-1.5">{t.contact.serviceNeeded}</label>
-                  <select className={`${inputClass} appearance-none`} style={{ background: 'rgba(255,255,255,0.04)' }}>
-                    <option value="" className="bg-dark-3 text-white">{t.contact.selectService}</option>
-                    {t.contact.serviceOptions.map(opt => (
-                      <option key={opt} className="bg-dark-3 text-white">{opt}</option>
-                    ))}
-                  </select>
+                  <label className="block font-heading font-semibold text-sm text-white/80 mb-1.5">{t.contact.address}</label>
+                  <input type="text" placeholder={t.contact.addressPlaceholder} className={inputClass} />
                 </div>
 
                 <div>

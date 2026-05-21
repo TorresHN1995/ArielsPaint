@@ -1,8 +1,8 @@
 import AnimatedSection from './AnimatedSection'
-import { FaTrophy, FaThumbsUp, FaUsers, FaShieldHalved, FaHandHoldingDollar, FaClock, FaBroom, FaEnvelope } from 'react-icons/fa6'
+import { FaTrophy, FaThumbsUp, FaUsers, FaShieldHalved, FaHandHoldingDollar, FaCertificate, FaAward, FaEnvelope } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
 
-const featureIcons = [FaShieldHalved, FaHandHoldingDollar, FaClock, FaBroom]
+const featureIcons = [FaShieldHalved, FaHandHoldingDollar, FaCertificate, FaAward]
 
 export default function About() {
   const { t } = useLang()

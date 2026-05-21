@@ -59,7 +59,7 @@ export default function Navbar() {
             <span className="uppercase">{lang}</span>
           </button>
 
-          <a href="tel:+1234567890" className="btn-glow rounded-full px-5 py-2.5 text-sm ml-2 flex items-center gap-2">
+          <a href="tel:+19083032770" className="btn-glow rounded-full px-5 py-2.5 text-sm ml-2 flex items-center gap-2">
             <FaPhone className="text-xs" /> {t.nav.callNow}
           </a>
         </div>
@@ -86,7 +86,7 @@ export default function Navbar() {
             <span className="text-base">{lang === 'en' ? '🇪🇸' : '🇺🇸'}</span>
             {lang === 'en' ? 'Espanol' : 'English'}
           </button>
-          <a href="tel:+1234567890" onClick={handleClick} className="btn-glow rounded-full px-5 py-3 text-sm mt-4 flex items-center justify-center gap-2 w-full">
+          <a href="tel:+19083032770" onClick={handleClick} className="btn-glow rounded-full px-5 py-3 text-sm mt-4 flex items-center justify-center gap-2 w-full">
             <FaPhone className="text-xs" /> {t.nav.callNow}
           </a>
         </div>
