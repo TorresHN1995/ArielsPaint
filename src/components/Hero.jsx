@@ -116,6 +116,13 @@ export default function Hero() {
                   </div>
                 </div>
               ))}
+
+              <a
+                href="#contact"
+                className="absolute bottom-[2%] left-1/2 -translate-x-1/2 animate-float-d3 btn-glow rounded-full px-6 py-3.5 text-sm sm:text-base flex items-center gap-2 whitespace-nowrap shadow-[0_12px_40px_rgba(255,107,53,0.45)] z-20"
+              >
+                <FaCalendarCheck /> {t.hero.btnEstimate}
+              </a>
             </motion.div>
           </div>
         </div>
