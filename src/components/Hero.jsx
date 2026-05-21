@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaCalendarCheck, FaImages, FaShieldHalved, FaAward, FaHeart, FaHouse, FaBuilding, FaTree, FaStar, FaGoogle, FaPeopleRoof, FaHandshake } from 'react-icons/fa6'
 import { useLang } from '../i18n/LanguageContext'
+import heroBg from '../assets/hero-bg.jpg'
 
 export default function Hero() {
   const { t } = useLang()
@@ -22,12 +23,17 @@ export default function Hero() {
   return (
     <header className="relative min-h-screen overflow-hidden bg-dark-1" id="hero">
       <div className="absolute inset-0 z-0">
+        <img
+          src={heroBg}
+          alt="Ariel's painting crew working on a home at sunset"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
         <div className="absolute inset-0" style={{
           background: `
-            radial-gradient(ellipse at 15% 50%, rgba(255,107,53,0.18) 0%, transparent 55%),
-            radial-gradient(ellipse at 85% 30%, rgba(255,217,61,0.08) 0%, transparent 45%),
-            radial-gradient(ellipse at 50% 95%, rgba(0,229,160,0.06) 0%, transparent 40%),
-            linear-gradient(180deg, #0A0A0F 0%, #111118 100%)
+            linear-gradient(100deg, rgba(10,10,15,0.94) 0%, rgba(10,10,15,0.82) 38%, rgba(10,10,15,0.5) 70%, rgba(10,10,15,0.35) 100%),
+            radial-gradient(ellipse at 15% 50%, rgba(255,107,53,0.20) 0%, transparent 55%),
+            radial-gradient(ellipse at 85% 30%, rgba(255,217,61,0.08) 0%, transparent 45%)
           `
         }} />
         <div className="absolute inset-0 opacity-[0.04]" style={{
