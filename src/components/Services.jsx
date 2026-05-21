@@ -31,7 +31,7 @@ export default function Services() {
           <p className="text-white/70 text-lg max-w-xl mx-auto">{t.services.sub}</p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {keys.map((key, i) => {
             const Icon = iconMap[i]
             const color = colorMap[i]
